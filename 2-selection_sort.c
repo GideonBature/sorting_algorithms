@@ -7,7 +7,7 @@
  */
 void selection_sort(int *array, size_t size)
 {
-	unsigned long i, j, temp, min_index = 0;
+	size_t i, j, temp, min_index = 0;
 
 	if (size < 2)
 		return;
@@ -19,7 +19,6 @@ void selection_sort(int *array, size_t size)
 			if (array[j] < array[min_index])
 				min_index = j;
 		}
-		/**Swap elements*/
 		temp = array[i];
 		array[i] = array[min_index];
 		array[min_index] = temp;
